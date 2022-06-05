@@ -73,6 +73,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\ItemFactory.cs" />
+    <Compile Include="Factory\TransactionFactory.cs" />
+    <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\ItemType.cs" />
     <Compile Include="Model\TrDetail.cs" />
@@ -118,7 +121,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
