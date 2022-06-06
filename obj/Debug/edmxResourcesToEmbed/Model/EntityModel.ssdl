@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar(max)" Nullable="false" />
+    <Property Name="ItemPrice" Type="int" Nullable="false" />
+    <Property Name="ItemPicture" Type="varchar(max)" Nullable="false" />
+    <Property Name="ItemDescription" Type="varchar(max)" Nullable="false" />
+    <Property Name="ItemTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ItemType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemTypeName" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrDetail">
+    <Key>
+      <PropertyRef Name="TrHeaderId" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="TrHeaderId" Type="int" Nullable="false" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TrHeader">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="TransactionDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Item__ItemTypeID__49C3F6B7">
+    <End Role="ItemType" Type="Self.ItemType" Multiplicity="1" />
+    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="ItemTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TrDetail__ItemID__4F7CD00D">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="TrDetail" Type="Self.TrDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrDetail">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TrDetail__TrHead__5070F446">
+    <End Role="TrHeader" Type="Self.TrHeader" Multiplicity="1" />
+    <End Role="TrDetail" Type="Self.TrDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrHeader">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrDetail">
+        <PropertyRef Name="TrHeaderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TrHeader__UserId__4CA06362">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="TrHeader" Type="Self.TrHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="TrHeader">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ItemType" EntityType="Self.ItemType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrDetail" EntityType="Self.TrDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TrHeader" EntityType="Self.TrHeader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Item__ItemTypeID__49C3F6B7" Association="Self.FK__Item__ItemTypeID__49C3F6B7">
+      <End Role="ItemType" EntitySet="ItemType" />
+      <End Role="Item" EntitySet="Item" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TrDetail__ItemID__4F7CD00D" Association="Self.FK__TrDetail__ItemID__4F7CD00D">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="TrDetail" EntitySet="TrDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TrDetail__TrHead__5070F446" Association="Self.FK__TrDetail__TrHead__5070F446">
+      <End Role="TrHeader" EntitySet="TrHeader" />
+      <End Role="TrDetail" EntitySet="TrDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TrHeader__UserId__4CA06362" Association="Self.FK__TrHeader__UserId__4CA06362">
+      <End Role="User" EntitySet="User" />
+      <End Role="TrHeader" EntitySet="TrHeader" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

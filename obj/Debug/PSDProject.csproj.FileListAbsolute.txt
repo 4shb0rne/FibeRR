@@ -57,3 +57,7 @@ C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.Co
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.pdb
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.dll
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.dll
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.xml
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml

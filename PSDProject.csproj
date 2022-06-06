@@ -97,10 +97,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ItemController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factory\ItemFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="Handler\ItemHandler.cs" />
+    <Compile Include="Handler\TransactionHandler.cs" />
+    <Compile Include="Handler\UserHandler.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
     <Compile Include="Model\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -133,6 +137,8 @@
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\TransactionRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Views\AddItem.aspx.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
