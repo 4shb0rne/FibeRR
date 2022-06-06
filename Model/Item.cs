@@ -24,6 +24,7 @@ namespace PSDProject.Model
         public string ItemName { get; set; }
         public int ItemPrice { get; set; }
         public string ItemPicture { get; set; }
+        public string ItemDescription { get; set; }
         public int ItemTypeID { get; set; }
     
         public virtual ItemType ItemType { get; set; }

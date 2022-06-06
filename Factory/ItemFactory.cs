@@ -9,7 +9,7 @@ namespace PSDProject.Factory
 {
     public class ItemFactory
     {
-        public static Item CreateItem(string name, FileUpload imageFile, int type, int realPrice)
+        public static Item CreateItem(string name, FileUpload imageFile, int type, string description, int Price)
         {
             var file = imageFile.PostedFile;
             var paths = "~/Image/" + DateTime.Now.ToString("yyyyMMdd_HHmmssffff") + "_" + file.FileName;
@@ -18,8 +18,9 @@ namespace PSDProject.Factory
             return new Item
             {
                 ItemName = name,
-                ItemPrice = realPrice,
+                ItemPrice = Price,
                 ItemTypeID = type,
+                ItemDescription = description,
                 ItemPicture = filePath
             };
         }

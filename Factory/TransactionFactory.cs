@@ -8,21 +8,21 @@ namespace PSDProject.Factory
 {
     public class TransactionFactory
     {
-        public static TrHeader CreateTrHeader(int memberID, DateTime transactionDate)
+        public static TrHeader CreateTrHeader(int UserID, DateTime transactionDate)
         {
             return new TrHeader
             {
-                MemberID = memberID,
+                UserId = UserID,
                 TransactionDate = transactionDate
             };
         }
 
-        public static TrDetail CreateTrDetail(int transactionID, int flowerID, int quantity)
+        public static TrDetail CreateTrDetail(int transactionID, int itemID, int quantity)
         {
             return new TrDetail
             {
-                TransactionID = transactionID,
-                FlowerID = flowerID,
+                TrHeaderId = transactionID,
+                ItemID = itemID,
                 Quantity = quantity
             };
         }
