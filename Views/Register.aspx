@@ -6,22 +6,26 @@
     <div class="d-flex justify-content-center" style="margin-top: 2.5%;">
     <div class="card row d-flex" style="width: 30rem;">
         <div class="card-body">
-            <form action="/register" method="POST">
+            <div>
                 <p class="card-text">Name</p>
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="name"/>
+                    <asp:TextBox ID="UsernameTxt" runat="server" class="form-control"></asp:TextBox>
                 </div>
                 <p class="card-text">Email</p>
                 <div class="mb-3">
-                    <input type="text" class="form-control" name="email"/>
+                    <asp:TextBox ID="EmailTxt" runat="server" class="form-control"></asp:TextBox>
                 </div>
                 <p class="card-text">Password</p>
                 <div class="mb-3">
-                    <input type="password" class="form-control" name="password"></input>
+                    <asp:TextBox ID="PasswordTxt" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                 </div>
-                <p><a href="/register"><button class="btn btn-success" style="width: 100%;">Register</button></a></p>
-                <p><a href="/login"><input type="button" class="btn btn-outline-success" style="width: 100%;" value="Login"></input></a></p>
-            </form>
+                <p>
+                    <asp:Button ID="registerBtn" runat="server" Text="Register" class="btn btn-success" style="width: 100%;" OnClick="registerBtn_Click"/>
+                </p>
+                <p>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Views/Login.aspx"><input type="button" value="Login" style="width:100%"/></asp:HyperLink>
+                </p>
+            </div>
         </div>
     </div>
 </div>

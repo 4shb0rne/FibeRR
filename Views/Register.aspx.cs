@@ -13,5 +13,10 @@ namespace PSDProject.Views
         {
 
         }
+
+        protected void registerBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
