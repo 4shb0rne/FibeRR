@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace PSDProject.Views
 {
-    public partial class AddItem : System.Web.UI.Page
+    public partial class CheckOut : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

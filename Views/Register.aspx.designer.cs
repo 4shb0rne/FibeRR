@@ -24,6 +24,15 @@ namespace PSDProject.Views
         protected global::System.Web.UI.WebControls.TextBox UsernameTxt;
 
         /// <summary>
+        /// UsernameLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label UsernameLbl;
+
+        /// <summary>
         /// EmailTxt control.
         /// </summary>
         /// <remarks>
@@ -33,6 +42,15 @@ namespace PSDProject.Views
         protected global::System.Web.UI.WebControls.TextBox EmailTxt;
 
         /// <summary>
+        /// EmailLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EmailLbl;
+
+        /// <summary>
         /// PasswordTxt control.
         /// </summary>
         /// <remarks>
@@ -40,6 +58,15 @@ namespace PSDProject.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordTxt;
+
+        /// <summary>
+        /// PasswordLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PasswordLbl;
 
         /// <summary>
         /// registerBtn control.

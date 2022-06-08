@@ -11,7 +11,7 @@ namespace PSDProject.Views
 {
 
 
-    public partial class AddItem
+    public partial class Transaction
     {
     }
 }

@@ -8,25 +8,33 @@ namespace PSDProject.Controller
 {
     public class UserController
     {
-        public static string CreateMember(string email, string password, string name)
+        public static List<string> CreateMember(string email, string password, string name)
         {
+            List<string> messages = new List<string>();
+            messages[0] = "";
+            messages[1] = "";
+            messages[2] = "";
             if (IsUniqueEmail(email) != null || !email.Contains("@") || email.Contains("@.") || email.Contains(".@") || !email.Contains("."))
             {
-                return "Email must be unique and using a correct email format";
+                messages[0] = "Email must be unique and using a correct email format";
             }
 
             if (password.Length < 3 || password.Length > 20)
             {
-                return "Password minimal length is 3 characters and 20 characters is the maximal";
+                messages[1] = "Password minimal length is 3 characters and 20 characters is the maximal"; 
             }
 
             if (name.Length < 3 || name.Length > 20 || !IsAlphabet(name))
             {
-                return "Name minimal length is 3 characters and 20 characters is the maximal and must be letter";
+                messages[2] = "Name minimal length is 3 characters and 20 characters is the maximal and must be letter";
             }
 
-            UserHandler.Register(email, password, name);
-            return null;
+            if(messages[0] == "" && messages[1] == "" && messages[2] == "")
+            {
+                UserHandler.Register(email, password, name);
+                return null;
+            }
+            return messages;
         }
 
         public static bool IsAlphabet(string s)

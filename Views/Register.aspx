@@ -7,17 +7,20 @@
     <div class="card row d-flex" style="width: 30rem;">
         <div class="card-body">
             <div>
-                <p class="card-text">Name</p>
+                <p class="card-text">Username</p>
                 <div class="mb-3">
                     <asp:TextBox ID="UsernameTxt" runat="server" class="form-control"></asp:TextBox>
+                    <asp:Label ID="UsernameLbl" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                 </div>
                 <p class="card-text">Email</p>
                 <div class="mb-3">
                     <asp:TextBox ID="EmailTxt" runat="server" class="form-control"></asp:TextBox>
+                    <asp:Label ID="EmailLbl" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                 </div>
                 <p class="card-text">Password</p>
                 <div class="mb-3">
                     <asp:TextBox ID="PasswordTxt" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
+                    <asp:Label ID="PasswordLbl" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                 </div>
                 <p>
                     <asp:Button ID="registerBtn" runat="server" Text="Register" class="btn btn-success" style="width: 100%;" OnClick="registerBtn_Click"/>
