@@ -61,3 +61,5 @@ C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.xml
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.dll
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.pdb

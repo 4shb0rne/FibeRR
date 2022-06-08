@@ -90,6 +90,13 @@
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Checkout.aspx" />
+    <Content Include="Views\ItemDetail.aspx" />
+    <Content Include="Views\Transaction.aspx" />
+    <Content Include="Views\DataCloth.aspx" />
+    <Content Include="Views\UpdateItem.aspx" />
+    <Content Include="Views\Search.aspx" />
+    <Content Include="Views\Home.aspx" />
     <Content Include="Views\AddItem.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Register.aspx" />
@@ -139,6 +146,55 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Views\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemDetail.aspx.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\ItemDetail.aspx.designer.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataCloth.aspx.cs">
+      <DependentUpon>DataCloth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\DataCloth.aspx.designer.cs">
+      <DependentUpon>DataCloth.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateItem.aspx.cs">
+      <DependentUpon>UpdateItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateItem.aspx.designer.cs">
+      <DependentUpon>UpdateItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddItem.aspx.cs">
       <DependentUpon>AddItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
