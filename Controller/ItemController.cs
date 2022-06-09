@@ -15,6 +15,16 @@ namespace PSDProject.Controller
             return ItemHandler.GetAllItems();
         }
 
+        public static string InsertItemType(string typename)
+        {
+            ItemHandler.CreateItemType(typename);
+            if(typename == null || typename == "")
+            {
+                return "Item Type Name Must not be empty";
+            }
+            return null;
+        }
+
         public static List<string> GetAllItemType()
         {
             return ItemHandler.GetAllItemType();

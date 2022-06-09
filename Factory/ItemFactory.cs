@@ -24,5 +24,13 @@ namespace PSDProject.Factory
                 ItemPicture = filePath
             };
         }
+
+        public static ItemType CreateItemType(string typename)
+        {
+            return new ItemType
+            {
+                ItemTypeName = typename
+            };
+        }
     }
 }

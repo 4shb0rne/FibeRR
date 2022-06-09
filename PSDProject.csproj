@@ -90,6 +90,7 @@
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\AddItemType.aspx" />
     <Content Include="Views\Checkout.aspx" />
     <Content Include="Views\ItemDetail.aspx" />
     <Content Include="Views\Transaction.aspx" />
@@ -146,6 +147,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\TransactionRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
+    <Compile Include="Views\AddItemType.aspx.cs">
+      <DependentUpon>AddItemType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\AddItemType.aspx.designer.cs">
+      <DependentUpon>AddItemType.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

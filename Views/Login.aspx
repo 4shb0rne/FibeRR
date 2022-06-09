@@ -18,7 +18,7 @@
                     </div>
                     <p class="card-text">Password</p>
                     <div class="mb-3">
-                        <asp:TextBox ID="PasswordTxt" runat="server" class="form-control"></asp:TextBox>
+                        <asp:TextBox ID="PasswordTxt" runat="server" class="form-control" TextMode="Password"></asp:TextBox>
                     <p>
                         <asp:CheckBox ID="RememberCheckBox" runat="server"/>
                         <asp:Label ID="RememberLabel" runat="server" Text="Remember Me" AssociatedControlID="RememberCheckBox"></asp:Label>

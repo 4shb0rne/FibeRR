@@ -24,6 +24,11 @@ namespace PSDProject.Handler
         {
             ItemRepository.CreateItem(name, imageFile, type, description, Price);
         }
+        
+        public static void CreateItemType(string typename)
+        {
+            ItemRepository.CreateItemType(typename);
+        }
 
         public static Item GetOneItem(int idx)
         {

@@ -20,6 +20,12 @@ namespace PSDProject.Repository
             db.SaveChanges();
         }
 
+        public static void CreateItemType(string typename)
+        {
+            db.ItemTypes.Add(ItemFactory.CreateItemType(typename));
+            db.SaveChanges();
+        }
+
         public static List<string> GetAllItemType()
         {
             return db.ItemTypes.Select(x => x.ItemTypeName).ToList();
