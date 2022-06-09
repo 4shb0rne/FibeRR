@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="PSDProject.Template" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.Master.cs" Inherits="PSDProject.Template" %>
 
 <!DOCTYPE html>
 
@@ -136,8 +136,9 @@
                 </div>
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
                     <ul class="navbar-nav ml-auto">
+                <asp:Panel ID="ManagePanel" runat="server">
                         <li class="nav-item">
-                            <div class="dropdown nav-link" href="#">
+                            <div class="dropdown nav-link">
                                 <a class="dropbtn btn btn-light">Manage Menu</a>
                                 <div class="dropdown-content row">
                                     <div class="col md-6">
@@ -145,19 +146,22 @@
                                         <asp:HyperLink ID="HyperLink2" runat="server">Manage Transactions</asp:HyperLink>
                                     </div>
                                     <div class="col md-6">
-                                        <a href="">Logout</a>
+                                        <a>
+                                            <asp:Button ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click"/>
+                                        </a>  
                                     </div>
                                 </div>
                             </div>
                         </li>
+                    </asp:Panel>
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">
-                                <button class="btn btn-success">Register</button>
+                            <a class="nav-link">
+                                <asp:Button ID="RegisterBtn" runat="server" Text="Register" class="btn btn-success" OnClick="RegisterBtn_Click"/>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">
-                                <button class="btn btn-outline-success">Login</button>
+                            <a class="nav-link">
+                                <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-outline-success" OnClick="LoginBtn_Click"/>
                             </a>
                         </li>
                     </ul>

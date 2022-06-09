@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Template.Master" AutoEventWireup="true" CodeBehind="AddItem.aspx.cs" Inherits="PSDProject.Views.AddItem" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Template.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="PSDProject.Views.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -9,7 +9,6 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </div>
     </div>
-
     <div class="p-5">
         <div class="popular-categories-section mb-5">
             <h2 class="mb-4" style="font-size:36px;">Popular Categories</h2>

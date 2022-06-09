@@ -67,10 +67,10 @@ namespace PSDProject.Controller
                 return "Credential is not valid";
             }
             HttpContext.Current.Session["Role"] = "User";
+            HttpContext.Current.Session["User"] = user;
             HttpContext.Current.Session["Username"] = user.UserName;
             HttpContext.Current.Session["ID"] = user.UserID;
             HttpContext.Current.Session["Email"] = email;
-
             if (remember)
             {
                 HttpCookie userCookie = new HttpCookie("UserCookie");

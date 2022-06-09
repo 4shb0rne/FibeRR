@@ -5,6 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="d-flex justify-content-center" style="margin-top: 2.5%;">
     <div class="card row d-flex" style="width: 30rem;">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+                <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                    Register
+                </h2>
+            </div>
         <div class="card-body">
             <div>
                 <p class="card-text">Username</p>

@@ -15,7 +15,7 @@ namespace PSDProject.Views
             {
                 if (Session["Role"] != null)
                 {
-                    Response.Redirect("../Home.aspx");
+                    Response.Redirect("../Home.aspx", false);
                 }
                 else if (Request.Cookies["UserCookie"] != null)
                 {
