@@ -24,6 +24,9 @@
                         <asp:Label ID="RememberLabel" runat="server" Text="Remember Me" AssociatedControlID="RememberCheckBox"></asp:Label>
                     </p>
                     <p>
+                        <asp:Label ID="ErrorLbl" runat="server" Text="" Visible="false"></asp:Label>
+                    </p>
+                    <p>
                         <asp:Button ID="LoginBtn" runat="server" Text="Login" class="btn btn-success" style="width: 100%;"
                             OnClick="LoginBtn_Click"/>
                     </p>

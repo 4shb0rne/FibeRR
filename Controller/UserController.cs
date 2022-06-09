@@ -11,9 +11,9 @@ namespace PSDProject.Controller
         public static List<string> CreateMember(string email, string password, string name)
         {
             List<string> messages = new List<string>();
-            messages[0] = "";
-            messages[1] = "";
-            messages[2] = "";
+            messages.Add("");
+            messages.Add("");
+            messages.Add("");
             if (IsUniqueEmail(email) != null || !email.Contains("@") || email.Contains("@.") || email.Contains(".@") || !email.Contains("."))
             {
                 messages[0] = "Email must be unique and using a correct email format";
@@ -67,8 +67,8 @@ namespace PSDProject.Controller
                 return "Credential is not valid";
             }
             HttpContext.Current.Session["Role"] = "User";
-            HttpContext.Current.Session["Username"] = (user).UserName;
-            HttpContext.Current.Session["ID"] = (user).UserID;
+            HttpContext.Current.Session["Username"] = user.UserName;
+            HttpContext.Current.Session["ID"] = user.UserID;
             HttpContext.Current.Session["Email"] = email;
 
             if (remember)
