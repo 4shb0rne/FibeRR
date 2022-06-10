@@ -31,7 +31,7 @@
                             OnClick="LoginBtn_Click"/>
                     </p>
                     <p>
-                        <asp:HyperLink ID="RegisterLink" runat="server" NavigateUrl="~/Views/Register.aspx.cs">
+                        <asp:HyperLink ID="RegisterLink" runat="server" NavigateUrl="~/Views/Register.aspx">
                             <input type="button" class="btn btn-outline-success" style="width: 100%;" value="Register"/>
                         </asp:HyperLink>
                     </p>

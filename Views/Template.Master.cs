@@ -12,7 +12,6 @@ namespace PSDProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterBtn.Text = (string)Session["Role"];
             if (Session["Role"] != null)
             {
                 RegisterBtn.Visible = false;

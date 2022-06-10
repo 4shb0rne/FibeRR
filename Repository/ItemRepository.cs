@@ -26,9 +26,9 @@ namespace PSDProject.Repository
             db.SaveChanges();
         }
 
-        public static List<string> GetAllItemType()
+        public static List<ItemType> GetAllItemType()
         {
-            return db.ItemTypes.Select(x => x.ItemTypeName).ToList();
+            return db.ItemTypes.ToList();
         }
 
         public static Item GetOneItem(int idx)

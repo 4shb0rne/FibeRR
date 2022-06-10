@@ -15,7 +15,7 @@ namespace PSDProject.Handler
             return ItemRepository.GetAllItems();
         }
 
-        public static List<string> GetAllItemType()
+        public static List<ItemType> GetAllItemType()
         {
             return ItemRepository.GetAllItemType();
         }

@@ -25,24 +25,24 @@ namespace PSDProject.Controller
             return null;
         }
 
-        public static List<string> GetAllItemType()
+        public static List<ItemType> GetAllItemType()
         {
             return ItemHandler.GetAllItemType();
         }
 
         public static string InsertFlower(string name, FileUpload imageFile,
-            string description, int type, string price)
+            string description, int type, int price)
         {
             string error = ItemValidation(name, imageFile, description, type, price);
 
             if (error == null)
             {
-                ItemHandler.CreateItem(name, imageFile, description, type + 1, int.Parse(price));
+                ItemHandler.CreateItem(name, imageFile, description, type, price);
             }
             return error;
         }
 
-        private static string ItemValidation(string name, FileUpload imageFile, string description, int type, string price)
+        private static string ItemValidation(string name, FileUpload imageFile, string description, int type, int price)
         {
             if (name.Length < 5)
             {
@@ -59,18 +59,13 @@ namespace PSDProject.Controller
                     return "Extention must ends with \".jpg\"";
                 }
             }
-            if (description.Length <= 50)
+            if (description.Length <= 20)
             {
-                return "Description must be longer than 50 characters";
+                return "Description must be longer than 20 characters";
             }
             if (type == -1)
             {
                 return "Item Type must be Filled";
-            }
-            int realPrice;
-            if (!int.TryParse(price, out realPrice))
-            {
-                return "Price must be numeric";
             }
             return null;
         }
@@ -101,13 +96,13 @@ namespace PSDProject.Controller
 
         public static string UpdateFlower(int flowerID, string name,
             FileUpload imageFile, string description,
-            int type, string price)
+            int type, int price)
         {
             string error = ItemValidation(name, imageFile, description, type, price);
 
             if (error == null)
             {
-                ItemHandler.UpdateItem(flowerID, name, imageFile, description, type + 1, int.Parse(price));
+                ItemHandler.UpdateItem(flowerID, name, imageFile, description, type, price);
             }
             return error;
         }

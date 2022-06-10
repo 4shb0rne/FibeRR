@@ -69,7 +69,7 @@ namespace PSDProject.Controller
             HttpContext.Current.Session["Role"] = "User";
             HttpContext.Current.Session["User"] = user;
             HttpContext.Current.Session["Username"] = user.UserName;
-            HttpContext.Current.Session["ID"] = user.UserID;
+            HttpContext.Current.Session["ID"] = user.Id;
             HttpContext.Current.Session["Email"] = email;
             if (remember)
             {

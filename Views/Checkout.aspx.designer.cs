@@ -11,7 +11,7 @@ namespace PSDProject.Views
 {
 
 
-    public partial class CheckOut
+    public partial class Checkout
     {
     }
 }

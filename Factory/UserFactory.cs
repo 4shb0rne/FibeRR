@@ -8,7 +8,7 @@ namespace PSDProject.Factory
 {
     public class UserFactory
     {
-        public static User CreateUser(string Name, string Email, string Password)
+        public static User CreateUser(string Email, string Name, string Password)
         {
             return new User
             {

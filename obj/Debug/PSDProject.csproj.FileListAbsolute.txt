@@ -66,9 +66,6 @@ C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.pdb
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll.config
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.pdb
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\EntityFramework.xml
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete

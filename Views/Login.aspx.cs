@@ -32,8 +32,9 @@ namespace PSDProject.Views
             bool rememberCheck = RememberCheckBox.Checked;
 
             string LoginUser = UserController.LoginUser(email, password, rememberCheck);
-            if(LoginUser != null)
+            if(LoginUser == null)
             {
+                //Session["Role"] = "User";
                 Response.Redirect("~/Views/Home.aspx");
             } else
             {
