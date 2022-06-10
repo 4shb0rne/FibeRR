@@ -45,7 +45,7 @@ namespace PSDProject.Repository
                 {
                     ItemId = item.Id,
                     ItemName = item.ItemName,
-                    ItemImage = item.ItemPicture,
+                    ItemPicture = item.ItemPicture,
                     ItemDescription = item.ItemDescription,
                     ItemType = type.ItemTypeName,
                     ItemPrice = item.ItemPrice

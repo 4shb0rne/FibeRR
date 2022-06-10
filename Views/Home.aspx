@@ -11,7 +11,6 @@
     </div>
     <div class="p-5">
         <div class="popular-categories-section mb-5">
-            <h2 class="mb-4" style="font-size:36px;">Popular Categories</h2>
             <form action="/search">
                 <div class="d-flex card-group justify-content-around">
                     <%--@foreach ($categories as $category)
@@ -25,7 +24,23 @@
             <h2 class="mb-4" style="font-size:36px;">All Products</h2>
             <div class="" style=" display:grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem;"
                 id="post-data">
-                <%--@include('data')--%>
+                <asp:Repeater ID="CardRepeater" runat="server">
+                    <ItemTemplate>
+                        <div class="card m-2" >
+                            <a>
+                                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("ItemPicture") %>' class="card-img-top title-hover"/>
+                            </a>
+                            <div class="card-body">
+                                <a class="card-text title-hover"><%# Eval("ItemName") %></a>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a class="list-group-item text-right" style="font-size:18px;">
+                                    <b><%# Eval("ItemPrice") %></b></a>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ namespace PSDProject.Factory
                 ItemPrice = Price,
                 ItemTypeID = type,
                 ItemDescription = description,
-                ItemPicture = filePath
+                ItemPicture = paths
             };
         }
 
