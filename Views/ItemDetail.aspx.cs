@@ -56,5 +56,11 @@ namespace PSDProject.Views
                 Response.Redirect("~/Views/Home.aspx");
             }
         }
+
+        protected void CheckoutBtn_Click(object sender, EventArgs e)
+        {
+            string id = Request.QueryString["Id"];
+            Response.Redirect("~/Views/Checkout.aspx?id=" + id);
+        }
     }
 }

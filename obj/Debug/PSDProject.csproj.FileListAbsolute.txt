@@ -8,8 +8,6 @@ C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.dll
 C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.pdb
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.dll.config
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.pdb
@@ -68,6 +66,8 @@ C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\Microsoft.CodeDom.Provider
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.xml
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.pdb

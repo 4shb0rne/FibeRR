@@ -20,7 +20,7 @@
                         <div class="d-flex justify-content-between font-weight-bold">
                             <p>Buy Now</p>
                             <asp:Label ID="PriceLbl" runat="server"></asp:Label>
-                            <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" class="btn btn-outline-success"/>
+                            <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" class="btn btn-outline-success" OnClick="CheckoutBtn_Click"/>
                         </div>
                     </div>
                 </div>
