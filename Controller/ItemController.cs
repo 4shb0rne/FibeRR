@@ -94,7 +94,7 @@ namespace PSDProject.Controller
             return ItemHandler.GetOneItem(int.Parse(idx));
         }
 
-        public static string UpdateFlower(int flowerID, string name,
+        public static string UpdateItem(int itemID, string name,
             FileUpload imageFile, string description,
             int type, int price)
         {
@@ -102,7 +102,7 @@ namespace PSDProject.Controller
 
             if (error == null)
             {
-                ItemHandler.UpdateItem(flowerID, name, imageFile, description, type, price);
+                ItemHandler.UpdateItem(itemID, name, imageFile, description, type, price);
             }
             return error;
         }

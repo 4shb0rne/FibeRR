@@ -13,7 +13,6 @@
                 <asp:DropDownList ID="categorySelect" runat="server" class="form-control">
                     
                 </asp:DropDownList>
-                <asp:Button ID="Button1" runat="server" Text="Button" CommandArgument=""/>
             </div>
             <div class="form-group">
                 <div class="form-grouping">

@@ -30,8 +30,9 @@
                 <label class="form-label" for="customFile">Image</label>
                 <asp:FileUpload ID="ImageFile" runat="server" class="form-control p-1" />
             </div>
-            <asp:Button ID="SubmitBtn" runat="server" Text="Submit" class="btn btn-success mb-2 w-100"/>
-            <asp:Button ID="CancelBtn" runat="server" Text="Cancel" style="opacity:0.6;" class="btn btn-success mb-2 w-100"/>
-            <asp:Button ID="DeleteBtn" runat="server" Text="Delete" class="btn btn-danger w-100"/>
+            <asp:Label ID="ErrorLbl" runat="server" Text="" Visible="false" ForeColor="red"></asp:Label>
+            <asp:Button ID="SubmitBtn" runat="server" Text="Submit" class="btn btn-success mb-2 w-100" OnClick="SubmitBtn_Click"/>
+            <asp:Button ID="CancelBtn" runat="server" Text="Cancel" style="opacity:0.6;" class="btn btn-success mb-2 w-100" OnClick="CancelBtn_Click"/>
+            <asp:Button ID="DeleteBtn" runat="server" Text="Delete" class="btn btn-danger w-100" OnClick="DeleteBtn_Click"/>
         </div>
 </asp:Content>

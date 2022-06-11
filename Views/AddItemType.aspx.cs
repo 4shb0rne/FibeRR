@@ -16,7 +16,7 @@ namespace PSDProject.Views
             {
                 if (Session["Role"] == null)
                 {
-                    Response.Redirect("~/View/Guest/Login.aspx");
+                    Response.Redirect("~/Views/Login.aspx");
                 }
             }
         }

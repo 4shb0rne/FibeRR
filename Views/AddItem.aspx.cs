@@ -15,14 +15,14 @@ namespace PSDProject.Views
             {
                 if (Session["Role"] == null)
                 {
-                    Response.Redirect("~/View/Guest/Login.aspx");
+                    Response.Redirect("~/Views/Login.aspx");
                 }
+                categorySelect.DataSource = ItemController.GetAllItemType();
+                categorySelect.DataBind();
+                categorySelect.DataTextField = "ItemTypeName";
+                categorySelect.DataValueField = "Id";
+                categorySelect.DataBind();
             }
-            categorySelect.DataSource = ItemController.GetAllItemType();
-            categorySelect.DataBind();
-            categorySelect.DataTextField = "ItemTypeName";
-            categorySelect.DataValueField = "Id";
-            categorySelect.DataBind();
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)

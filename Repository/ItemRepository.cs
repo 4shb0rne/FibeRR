@@ -57,10 +57,7 @@ namespace PSDProject.Repository
         {
             Item item = db.Items.Where(x => x.Id == ItemID).FirstOrDefault();
             if (item == null) return;
-            item.ItemName = name;
-            item.ItemDescription = description;
-            item.ItemTypeID = type;
-            item.ItemPrice = Price;
+            
 
 
             var deletedFilePath = HttpContext.Current.Server.MapPath(item.ItemPicture);
@@ -78,6 +75,10 @@ namespace PSDProject.Repository
                 DateTime.Now.ToString("yyyyMMdd_HHmmssffff") + "_" + file.FileName;
             var filePath = HttpContext.Current.Server.MapPath(fileName);
             file.SaveAs(filePath);
+            item.ItemName = name;
+            item.ItemDescription = description;
+            item.ItemTypeID = type;
+            item.ItemPrice = Price;
             item.ItemPicture = fileName;
 
             db.SaveChanges();
