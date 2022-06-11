@@ -95,7 +95,6 @@
     <Content Include="Views\ItemDetail.aspx" />
     <Content Include="Views\Transaction.aspx" />
     <Content Include="Views\UpdateItem.aspx" />
-    <Content Include="Views\Search.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\AddItem.aspx" />
     <Content Include="Views\Login.aspx" />
@@ -180,13 +179,6 @@
     </Compile>
     <Compile Include="Views\UpdateItem.aspx.designer.cs">
       <DependentUpon>UpdateItem.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Search.aspx.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Search.aspx.designer.cs">
-      <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

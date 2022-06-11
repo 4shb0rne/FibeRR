@@ -16,7 +16,7 @@ namespace PSDProject.Views
             {
                 string id = Request.QueryString["Id"];
                 Item item = ItemController.GetOneItem(id);
-
+                int userid = (int)Session["ID"];
                 if (item == null)
                 {
                     Response.Redirect("~/Views/Home.aspx");
@@ -28,6 +28,14 @@ namespace PSDProject.Views
                     DescLbl.Text = item.ItemDescription;
                     CategoryLbl.Text = item.ItemType.ItemTypeName;
                     Image.ImageUrl = item.ItemPicture;
+                    if (item.UserID == userid)
+                    {
+                        BtnPanel.Visible = true;
+                    }
+                    else
+                    {
+                        BtnPanel.Visible = false;
+                    }
                 }
             }
         }
@@ -36,6 +44,17 @@ namespace PSDProject.Views
         {
             string id = Request.QueryString["Id"];
             Response.Redirect("~/Views/UpdateItem.aspx?id=" + id);
+        }
+
+        protected void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            string id = Request.QueryString["Id"];
+            string error = ItemController.DeleteItem(id);
+
+            if(error == null)
+            {
+                Response.Redirect("~/Views/Home.aspx");
+            }
         }
     }
 }

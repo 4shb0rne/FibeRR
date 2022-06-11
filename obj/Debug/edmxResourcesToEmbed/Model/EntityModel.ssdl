@@ -10,6 +10,7 @@
     <Property Name="ItemPicture" Type="varchar(max)" Nullable="false" />
     <Property Name="ItemDescription" Type="varchar(max)" Nullable="false" />
     <Property Name="ItemTypeID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" />
   </EntityType>
   <EntityType Name="ItemType">
     <Key>
@@ -92,6 +93,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Item" Type="Self.Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Database1ModelStoreContainer">
     <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ItemType" EntityType="Self.ItemType" Schema="dbo" store:Type="Tables" />
@@ -113,6 +126,10 @@
     <AssociationSet Name="FK__TrHeader__UserId__4CA06362" Association="Self.FK__TrHeader__UserId__4CA06362">
       <End Role="User" EntitySet="User" />
       <End Role="TrHeader" EntitySet="TrHeader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User" Association="Self.FK_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Item" EntitySet="Item" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

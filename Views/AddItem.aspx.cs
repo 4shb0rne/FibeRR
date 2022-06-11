@@ -32,7 +32,8 @@ namespace PSDProject.Views
             int price = int.Parse(PriceTxt.Text);
             string description = DescriptionTxt.Text;
 
-            string error = ItemController.InsertItem(title, ImageFile, description, typeid, price);
+            int userid = (int)Session["ID"];
+            string error = ItemController.InsertItem(title, ImageFile, description, typeid, price, userid);
 
             if(error == null)
             {

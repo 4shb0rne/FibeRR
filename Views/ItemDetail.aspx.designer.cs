@@ -51,6 +51,15 @@ namespace PSDProject.Views
         protected global::System.Web.UI.WebControls.Image Image;
 
         /// <summary>
+        /// BtnPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel BtnPanel;
+
+        /// <summary>
         /// EditBtn control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace PSDProject.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button EditBtn;
+
+        /// <summary>
+        /// DeleteBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button DeleteBtn;
 
         /// <summary>
         /// PriceLbl control.

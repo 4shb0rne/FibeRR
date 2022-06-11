@@ -14,9 +14,9 @@ namespace PSDProject.Repository
     {
         public static Database1Entities db = new Database1Entities();
 
-        public static void CreateItem(string name, FileUpload imageFile, int type, string description, int Price)
+        public static void CreateItem(string name, FileUpload imageFile, int type, string description, int Price, int userID)
         {
-            db.Items.Add(ItemFactory.CreateItem(name, imageFile, type, description, Price));
+            db.Items.Add(ItemFactory.CreateItem(name, imageFile, type, description, Price, userID));
             db.SaveChanges();
         }
 

@@ -22,6 +22,10 @@
       <End Role="User" EntitySet="Users" />
       <End Role="TrHeader" EntitySet="TrHeaders" />
     </AssociationSet>
+    <AssociationSet Name="FK_User" Association="Database1Model.FK_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Item" EntitySet="Items" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Item">
     <Key>
@@ -35,6 +39,8 @@
     <Property Name="ItemTypeID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ItemType" Relationship="Database1Model.FK__Item__ItemTypeID__49C3F6B7" FromRole="Item" ToRole="ItemType" />
     <NavigationProperty Name="TrDetails" Relationship="Database1Model.FK__TrDetail__ItemID__4F7CD00D" FromRole="Item" ToRole="TrDetail" />
+    <Property Name="UserID" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Database1Model.FK_User" FromRole="Item" ToRole="User" />
   </EntityType>
   <EntityType Name="ItemType">
     <Key>
@@ -74,6 +80,7 @@
     <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TrHeaders" Relationship="Database1Model.FK__TrHeader__UserId__4CA06362" FromRole="User" ToRole="TrHeader" />
+    <NavigationProperty Name="Items" Relationship="Database1Model.FK_User" FromRole="User" ToRole="Item" />
   </EntityType>
   <Association Name="FK__Item__ItemTypeID__49C3F6B7">
     <End Type="Database1Model.ItemType" Role="ItemType" Multiplicity="1" />
@@ -120,6 +127,18 @@
       </Principal>
       <Dependent Role="TrHeader">
         <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User">
+    <End Type="Database1Model.User" Role="User" Multiplicity="0..1" />
+    <End Type="Database1Model.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="UserID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -11,7 +11,10 @@
                 <asp:Image ID="Image" runat="server" class="card-img-top title-hover" />
             </div>
             <div class="flex-right-gig">
-                <asp:Button ID="EditBtn" runat="server" class="btn btn-outline-warning" Text="Edit" OnClick="EditBtn_Click"/>
+                <asp:Panel ID="BtnPanel" runat="server" Visible="false">
+                    <asp:Button ID="EditBtn" runat="server" class="btn btn-outline-warning" Text="Edit" OnClick="EditBtn_Click"/>
+                    <asp:Button ID="DeleteBtn" runat="server" class="btn btn-outline-danger" Text="Delete" OnClick="DeleteBtn_Click"/>
+                </asp:Panel>
                 <div class="card mb-3" style="width:24rem">
                     <div class="card-body">
                         <div class="d-flex justify-content-between font-weight-bold">

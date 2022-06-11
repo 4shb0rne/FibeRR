@@ -18,6 +18,7 @@ namespace PSDProject.Model
         public User()
         {
             this.TrHeaders = new HashSet<TrHeader>();
+            this.Items = new HashSet<Item>();
         }
     
         public int Id { get; set; }
@@ -27,5 +28,7 @@ namespace PSDProject.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrHeader> TrHeaders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

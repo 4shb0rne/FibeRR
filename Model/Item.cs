@@ -26,9 +26,11 @@ namespace PSDProject.Model
         public string ItemPicture { get; set; }
         public string ItemDescription { get; set; }
         public int ItemTypeID { get; set; }
+        public Nullable<int> UserID { get; set; }
     
         public virtual ItemType ItemType { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrDetail> TrDetails { get; set; }
+        public virtual User User { get; set; }
     }
 }

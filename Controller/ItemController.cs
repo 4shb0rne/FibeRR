@@ -31,13 +31,12 @@ namespace PSDProject.Controller
         }
 
         public static string InsertItem(string name, FileUpload imageFile,
-            string description, int type, int price)
+            string description, int type, int price, int userID)
         {
             string error = ItemValidation(name, imageFile, description, type, price);
-
             if (error == null)
             {
-                ItemHandler.CreateItem(name, imageFile, description, type, price);
+                ItemHandler.CreateItem(name, imageFile, description, type, price, userID);
             }
             return error;
         }
@@ -70,7 +69,7 @@ namespace PSDProject.Controller
             return null;
         }
 
-        public static string DeleteFlower(string arg)
+        public static string DeleteItem(string arg)
         {
 
             if (!int.TryParse(arg, out int idx))

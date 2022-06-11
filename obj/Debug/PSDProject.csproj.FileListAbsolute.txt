@@ -1,3 +1,15 @@
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.dll
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.pdb
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll.config
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.pdb
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.dll
+C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.pdb
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.dll.config
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\PSDProject.pdb
@@ -50,24 +62,12 @@ C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\roslyn\vbc.exe.config
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\roslyn\vbc.rsp
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\roslyn\VBCSCompiler.exe
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.dll
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.xml
+C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.pdb
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.dll
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.dll
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.xml
-C:\Users\ashbo\source\repos\PSDProject\PSDProject\bin\EntityFramework.SqlServer.xml
-C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.dll
-C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.pdb
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll.config
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.dll
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\bin\PSDProject.pdb
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.dll
-C:\Users\william\Desktop\Tugas\Pattern Software Design\PSDProject\PSDProject\obj\Debug\PSDProject.pdb

@@ -20,9 +20,9 @@ namespace PSDProject.Handler
             return ItemRepository.GetAllItemType();
         }
 
-        public static void CreateItem(string name, FileUpload imageFile, string description, int type, int Price)
+        public static void CreateItem(string name, FileUpload imageFile, string description, int type, int Price, int userID)
         {
-            ItemRepository.CreateItem(name, imageFile, type, description, Price);
+            ItemRepository.CreateItem(name, imageFile, type, description, Price, userID);
         }
         
         public static void CreateItemType(string typename)

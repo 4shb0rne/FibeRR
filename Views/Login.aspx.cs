@@ -34,7 +34,6 @@ namespace PSDProject.Views
             string LoginUser = UserController.LoginUser(email, password, rememberCheck);
             if(LoginUser == null)
             {
-                //Session["Role"] = "User";
                 Response.Redirect("~/Views/Home.aspx");
             } else
             {
