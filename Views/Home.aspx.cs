@@ -19,7 +19,7 @@ namespace PSDProject.Views
         {
             LinkButton linkbtn = (LinkButton)sender;
             string id = linkbtn.CommandArgument;
-            Response.Redirect("~/Views/UpdateItem.aspx?id="+id);
+            Response.Redirect("~/Views/ItemDetail.aspx?id="+id);
         }
     }
 }
