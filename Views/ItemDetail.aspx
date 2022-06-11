@@ -5,7 +5,7 @@
      <div style="padding: 2% 10% ">
         <div class="d-flex justify-content-around ">
             <div class="flex-left-gig">
-                <p><%--{{ $gig->category->name }}--%> Catergory Name</p>
+                <p><%--{{ $gig->category->name }}--%> Category Name</p>
                 <h4><%--{{ $gig->name }}--%> Name</h4>
                 <div class="d-flex align-items-center mb-2">
                     <a href="<%--/profile/{{ $gig->user->id }}--%>"

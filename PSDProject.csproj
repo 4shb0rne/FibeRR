@@ -94,7 +94,6 @@
     <Content Include="Views\Checkout.aspx" />
     <Content Include="Views\ItemDetail.aspx" />
     <Content Include="Views\Transaction.aspx" />
-    <Content Include="Views\DataCloth.aspx" />
     <Content Include="Views\UpdateItem.aspx" />
     <Content Include="Views\Search.aspx" />
     <Content Include="Views\Home.aspx" />
@@ -174,13 +173,6 @@
     </Compile>
     <Compile Include="Views\Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\DataCloth.aspx.cs">
-      <DependentUpon>DataCloth.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\DataCloth.aspx.designer.cs">
-      <DependentUpon>DataCloth.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UpdateItem.aspx.cs">
       <DependentUpon>UpdateItem.aspx</DependentUpon>

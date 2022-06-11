@@ -12,7 +12,13 @@ namespace PSDProject.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Session["Role"] == null)
+                {
+                    Response.Redirect("~/View/Guest/Login.aspx");
+                }
+            }
         }
 
         protected void SubmitBtn_Click(object sender, EventArgs e)

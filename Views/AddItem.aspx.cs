@@ -11,6 +11,13 @@ namespace PSDProject.Views
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["Role"] == null)
+                {
+                    Response.Redirect("~/View/Guest/Login.aspx");
+                }
+            }
             categorySelect.DataSource = ItemController.GetAllItemType();
             categorySelect.DataBind();
             categorySelect.DataTextField = "ItemTypeName";
@@ -25,7 +32,7 @@ namespace PSDProject.Views
             int price = int.Parse(PriceTxt.Text);
             string description = DescriptionTxt.Text;
 
-            string error = ItemController.InsertFlower(title, ImageFile, description, typeid, price);
+            string error = ItemController.InsertItem(title, ImageFile, description, typeid, price);
 
             if(error == null)
             {

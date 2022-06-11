@@ -30,7 +30,7 @@ namespace PSDProject.Controller
             return ItemHandler.GetAllItemType();
         }
 
-        public static string InsertFlower(string name, FileUpload imageFile,
+        public static string InsertItem(string name, FileUpload imageFile,
             string description, int type, int price)
         {
             string error = ItemValidation(name, imageFile, description, type, price);
@@ -85,7 +85,7 @@ namespace PSDProject.Controller
             return null;
         }
 
-        public static Item GetOneFlower(string idx)
+        public static Item GetOneItem(string idx)
         {
             if (!int.TryParse(idx, out int realIdx))
             {

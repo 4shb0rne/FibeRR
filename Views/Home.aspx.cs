@@ -14,5 +14,12 @@ namespace PSDProject.Views
             CardRepeater.DataSource = ItemController.GetAllItems();
             CardRepeater.DataBind();
         }
+
+        protected void OpenDetail_Click(object sender, EventArgs e)
+        {
+            LinkButton linkbtn = (LinkButton)sender;
+            string id = linkbtn.CommandArgument;
+            Response.Redirect("~/Views/UpdateItem.aspx?id="+id);
+        }
     }
 }
