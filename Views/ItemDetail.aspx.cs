@@ -16,7 +16,11 @@ namespace PSDProject.Views
             {
                 string id = Request.QueryString["Id"];
                 Item item = ItemController.GetOneItem(id);
-                int userid = (int)Session["ID"];
+                int userid = -1;
+                if (Session["Role"] != null)
+                {
+                    userid = (int)Session["ID"];
+                }
                 if (item == null)
                 {
                     Response.Redirect("~/Views/Home.aspx");
