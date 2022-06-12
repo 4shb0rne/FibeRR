@@ -26,6 +26,15 @@
       <End Role="User" EntitySet="Users" />
       <End Role="Item" EntitySet="Items" />
     </AssociationSet>
+    <EntitySet Name="Carts" EntityType="Database1Model.Cart" />
+    <AssociationSet Name="FK__Cart__ItemID__02FC7413" Association="Database1Model.FK__Cart__ItemID__02FC7413">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cart__UserID__03F0984C" Association="Database1Model.FK__Cart__UserID__03F0984C">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Item">
     <Key>
@@ -41,6 +50,7 @@
     <NavigationProperty Name="TrDetails" Relationship="Database1Model.FK__TrDetail__ItemID__4F7CD00D" FromRole="Item" ToRole="TrDetail" />
     <Property Name="UserID" Type="Int32" />
     <NavigationProperty Name="User" Relationship="Database1Model.FK_User" FromRole="Item" ToRole="User" />
+    <NavigationProperty Name="Carts" Relationship="Database1Model.FK__Cart__ItemID__02FC7413" FromRole="Item" ToRole="Cart" />
   </EntityType>
   <EntityType Name="ItemType">
     <Key>
@@ -81,6 +91,7 @@
     <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="TrHeaders" Relationship="Database1Model.FK__TrHeader__UserId__4CA06362" FromRole="User" ToRole="TrHeader" />
     <NavigationProperty Name="Items" Relationship="Database1Model.FK_User" FromRole="User" ToRole="Item" />
+    <NavigationProperty Name="Carts" Relationship="Database1Model.FK__Cart__UserID__03F0984C" FromRole="User" ToRole="Cart" />
   </EntityType>
   <Association Name="FK__Item__ItemTypeID__49C3F6B7">
     <End Type="Database1Model.ItemType" Role="ItemType" Multiplicity="1" />
@@ -138,6 +149,41 @@
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="Item">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ItemID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Item" Relationship="Database1Model.FK__Cart__ItemID__02FC7413" FromRole="Cart" ToRole="Item" />
+    <NavigationProperty Name="User" Relationship="Database1Model.FK__Cart__UserID__03F0984C" FromRole="Cart" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Cart__ItemID__02FC7413">
+    <End Type="Database1Model.Item" Role="Item" Multiplicity="1" />
+    <End Type="Database1Model.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cart__UserID__03F0984C">
+    <End Type="Database1Model.User" Role="User" Multiplicity="1" />
+    <End Type="Database1Model.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart">
         <PropertyRef Name="UserID" />
       </Dependent>
     </ReferentialConstraint>

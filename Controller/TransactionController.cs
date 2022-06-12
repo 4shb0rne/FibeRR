@@ -9,22 +9,15 @@ namespace PSDProject.Controller
 {
     public class TransactionController
     {
-        public static string InsertTransaction(int UserID, int ItemID, int quantity)
+        public static int InsertTransaction(int UserID)
         {
-            string error = null;
+            TrHeader header = TransactionHandler.CreateTrHeader(UserID, DateTime.Now);
+            return header.Id;
+        }
 
-            if (quantity < 1 || quantity > 1000)
-            {
-                error = "Quantity must be between 1 and 1000";
-                return error;
-            }
-            else
-            {
-                TrHeader header = TransactionHandler.CreateTrHeader(UserID, DateTime.Now);
-                TransactionHandler.CreateTrDetail(header.Id, ItemID, quantity);
-            }
-
-            return error;
+        public static void InsertTransactionDetail(int headerid, int ItemID, int quantity)
+        {
+            TransactionHandler.CreateTrDetail(headerid, ItemID, quantity);
         }
 
         public static List<TrHeader> GetAllTransaction(int UserID)

@@ -30,7 +30,7 @@
                             <h6><asp:Label ID="PriceLbl" runat="server" Text="Label"></asp:Label></h6>
                             <h5>Quantity</h5>
                             <asp:TextBox ID="QuantityTxt" runat="server" TextMode="Number"></asp:TextBox>
-                            <asp:Button ID="SubmitBtn" runat="server" Text="Checkout" 
+                            <asp:Button ID="SubmitBtn" runat="server" Text="Add to cart" 
                                 class="btn btn-success w-100 mt-2" OnClick="SubmitBtn_Click"/>
                         </div>
                     </div>

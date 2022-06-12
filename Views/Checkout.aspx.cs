@@ -36,12 +36,8 @@ namespace PSDProject.Views
             int userid = (int)Session["ID"];
             int quantity = int.Parse(QuantityTxt.Text);
 
-            string error = TransactionController.InsertTransaction(userid, itemid, quantity);
-
-            if(error == null)
-            {
-                Response.Redirect("~/Views/Home.aspx");
-            }
+            CartController.AddCart(userid, itemid, quantity);
+            Response.Redirect("~/Views/Cart.aspx");
         }
     }
 }

@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="ItemID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Item">
           <Key>
             <PropertyRef Name="Id" />
@@ -50,6 +59,30 @@
           <Property Name="UserEmail" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <Association Name="FK__Cart__ItemID__02FC7413">
+          <End Role="Item" Type="Self.Item" Multiplicity="1" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cart__UserID__03F0984C">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Item__ItemTypeID__49C3F6B7">
           <End Role="ItemType" Type="Self.ItemType" Multiplicity="1" />
           <End Role="Item" Type="Self.Item" Multiplicity="*" />
@@ -111,11 +144,20 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ItemType" EntityType="Self.ItemType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrDetail" EntityType="Self.TrDetail" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrHeader" EntityType="Self.TrHeader" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Cart__ItemID__02FC7413" Association="Self.FK__Cart__ItemID__02FC7413">
+            <End Role="Item" EntitySet="Item" />
+            <End Role="Cart" EntitySet="Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cart__UserID__03F0984C" Association="Self.FK__Cart__UserID__03F0984C">
+            <End Role="User" EntitySet="User" />
+            <End Role="Cart" EntitySet="Cart" />
+          </AssociationSet>
           <AssociationSet Name="FK__Item__ItemTypeID__49C3F6B7" Association="Self.FK__Item__ItemTypeID__49C3F6B7">
             <End Role="ItemType" EntitySet="ItemType" />
             <End Role="Item" EntitySet="Item" />
@@ -167,6 +209,15 @@
             <End Role="User" EntitySet="Users" />
             <End Role="Item" EntitySet="Items" />
           </AssociationSet>
+          <EntitySet Name="Carts" EntityType="Database1Model.Cart" />
+          <AssociationSet Name="FK__Cart__ItemID__02FC7413" Association="Database1Model.FK__Cart__ItemID__02FC7413">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="Cart" EntitySet="Carts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cart__UserID__03F0984C" Association="Database1Model.FK__Cart__UserID__03F0984C">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Cart" EntitySet="Carts" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Item">
           <Key>
@@ -182,6 +233,7 @@
           <NavigationProperty Name="TrDetails" Relationship="Database1Model.FK__TrDetail__ItemID__4F7CD00D" FromRole="Item" ToRole="TrDetail" />
           <Property Name="UserID" Type="Int32" />
           <NavigationProperty Name="User" Relationship="Database1Model.FK_User" FromRole="Item" ToRole="User" />
+          <NavigationProperty Name="Carts" Relationship="Database1Model.FK__Cart__ItemID__02FC7413" FromRole="Item" ToRole="Cart" />
         </EntityType>
         <EntityType Name="ItemType">
           <Key>
@@ -222,6 +274,7 @@
           <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TrHeaders" Relationship="Database1Model.FK__TrHeader__UserId__4CA06362" FromRole="User" ToRole="TrHeader" />
           <NavigationProperty Name="Items" Relationship="Database1Model.FK_User" FromRole="User" ToRole="Item" />
+          <NavigationProperty Name="Carts" Relationship="Database1Model.FK__Cart__UserID__03F0984C" FromRole="User" ToRole="Cart" />
         </EntityType>
         <Association Name="FK__Item__ItemTypeID__49C3F6B7">
           <End Type="Database1Model.ItemType" Role="ItemType" Multiplicity="1" />
@@ -283,6 +336,41 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Cart">
+          <Key>
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ItemID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="ItemID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Item" Relationship="Database1Model.FK__Cart__ItemID__02FC7413" FromRole="Cart" ToRole="Item" />
+          <NavigationProperty Name="User" Relationship="Database1Model.FK__Cart__UserID__03F0984C" FromRole="Cart" ToRole="User" />
+        </EntityType>
+        <Association Name="FK__Cart__ItemID__02FC7413">
+          <End Type="Database1Model.Item" Role="Item" Multiplicity="1" />
+          <End Type="Database1Model.Cart" Role="Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Item">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="ItemID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cart__UserID__03F0984C">
+          <End Type="Database1Model.User" Role="User" Multiplicity="1" />
+          <End Type="Database1Model.Cart" Role="Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -335,6 +423,15 @@
                 <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carts">
+            <EntityTypeMapping TypeName="Database1Model.Cart">
+              <MappingFragment StoreEntitySet="Cart">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

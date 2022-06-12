@@ -30,5 +30,6 @@ namespace PSDProject.Model
         public virtual DbSet<TrDetail> TrDetails { get; set; }
         public virtual DbSet<TrHeader> TrHeaders { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
     }
 }

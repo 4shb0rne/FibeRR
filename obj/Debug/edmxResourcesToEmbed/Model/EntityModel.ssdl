@@ -1,5 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="Item">
     <Key>
       <PropertyRef Name="Id" />
@@ -45,6 +54,30 @@
     <Property Name="UserEmail" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="UserPassword" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <Association Name="FK__Cart__ItemID__02FC7413">
+    <End Role="Item" Type="Self.Item" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Cart__UserID__03F0984C">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK__Item__ItemTypeID__49C3F6B7">
     <End Role="ItemType" Type="Self.ItemType" Multiplicity="1" />
     <End Role="Item" Type="Self.Item" Multiplicity="*" />
@@ -106,11 +139,20 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="Cart" EntityType="Self.Cart" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ItemType" EntityType="Self.ItemType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TrDetail" EntityType="Self.TrDetail" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TrHeader" EntityType="Self.TrHeader" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Cart__ItemID__02FC7413" Association="Self.FK__Cart__ItemID__02FC7413">
+      <End Role="Item" EntitySet="Item" />
+      <End Role="Cart" EntitySet="Cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Cart__UserID__03F0984C" Association="Self.FK__Cart__UserID__03F0984C">
+      <End Role="User" EntitySet="User" />
+      <End Role="Cart" EntitySet="Cart" />
+    </AssociationSet>
     <AssociationSet Name="FK__Item__ItemTypeID__49C3F6B7" Association="Self.FK__Item__ItemTypeID__49C3F6B7">
       <End Role="ItemType" EntitySet="ItemType" />
       <End Role="Item" EntitySet="Item" />

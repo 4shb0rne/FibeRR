@@ -18,6 +18,7 @@ namespace PSDProject.Model
         public Item()
         {
             this.TrDetails = new HashSet<TrDetail>();
+            this.Carts = new HashSet<Cart>();
         }
     
         public int Id { get; set; }
@@ -32,5 +33,7 @@ namespace PSDProject.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TrDetail> TrDetails { get; set; }
         public virtual User User { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Cart> Carts { get; set; }
     }
 }

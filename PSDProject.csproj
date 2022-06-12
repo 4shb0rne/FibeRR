@@ -91,6 +91,7 @@
       <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
     <Content Include="Views\AddItemType.aspx" />
+    <Content Include="Views\Cart.aspx" />
     <Content Include="Views\Checkout.aspx" />
     <Content Include="Views\ItemDetail.aspx" />
     <Content Include="Views\Transaction.aspx" />
@@ -103,15 +104,22 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\ItemController.cs" />
     <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\ItemFactory.cs" />
     <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="Factory\UserFactory.cs" />
+    <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\ItemHandler.cs" />
     <Compile Include="Handler\TransactionHandler.cs" />
     <Compile Include="Handler\UserHandler.cs" />
+    <Compile Include="Model\Cart.cs">
+      <DependentUpon>EntityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Repository\CartRepository.cs" />
     <Compile Include="Repository\ItemRepository.cs" />
     <Compile Include="Model\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -152,6 +160,13 @@
     </Compile>
     <Compile Include="Views\AddItemType.aspx.designer.cs">
       <DependentUpon>AddItemType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Checkout.aspx.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>

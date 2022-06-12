@@ -15,6 +15,9 @@
         <AssociationConnector Association="Database1Model.FK__TrDetail__TrHead__5070F446" />
         <AssociationConnector Association="Database1Model.FK__TrHeader__UserId__4CA06362" />
         <AssociationConnector Association="Database1Model.FK_User" />
+        <EntityTypeShape EntityType="Database1Model.Cart" Width="1.5" PointX="5.25" PointY="3.625" />
+        <AssociationConnector Association="Database1Model.FK__Cart__ItemID__02FC7413" />
+        <AssociationConnector Association="Database1Model.FK__Cart__UserID__03F0984C" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
