@@ -31,5 +31,10 @@ namespace PSDProject.Controller
         {
             return TransactionHandler.GetAllTransaction(UserID);
         }
+
+        public static List<TrDetail> GetAllTransactionDetail(int TransactionID)
+        {
+            return TransactionHandler.GetAllTransactionDetail(TransactionID);
+        }
     }
 }

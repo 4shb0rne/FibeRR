@@ -23,5 +23,10 @@ namespace PSDProject.Handler
         {
             return TransactionRepository.GetAllTrHeader(UserID);
         }
+
+        public static List<TrDetail> GetAllTransactionDetail(int TransactionID)
+        {
+            return TransactionRepository.GetAllTrDetail(TransactionID);
+        }
     }
 }

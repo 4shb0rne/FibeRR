@@ -94,6 +94,7 @@
     <Content Include="Views\Checkout.aspx" />
     <Content Include="Views\ItemDetail.aspx" />
     <Content Include="Views\Transaction.aspx" />
+    <Content Include="Views\TransactionDetail.aspx" />
     <Content Include="Views\UpdateItem.aspx" />
     <Content Include="Views\Home.aspx" />
     <Content Include="Views\AddItem.aspx" />
@@ -172,6 +173,13 @@
     </Compile>
     <Compile Include="Views\Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TransactionDetail.aspx.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TransactionDetail.aspx.designer.cs">
+      <DependentUpon>TransactionDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\UpdateItem.aspx.cs">
       <DependentUpon>UpdateItem.aspx</DependentUpon>

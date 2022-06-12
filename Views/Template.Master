@@ -142,13 +142,12 @@
                                 <a class="dropbtn btn btn-light">Manage Menu</a>
                                 <div class="dropdown-content row">
                                     <div class="col md-6">
-                                        <asp:HyperLink ID="HyperLink1" runat="server">Manage Items</asp:HyperLink>
-                                        <asp:HyperLink ID="HyperLink2" runat="server">Manage Transactions</asp:HyperLink>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Views/AddItem.aspx">Add Item</asp:HyperLink>
+                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Views/Transaction.aspx">Manage Transactions</asp:HyperLink>
                                     </div>
                                     <div class="col md-6">
-                                        <a>
-                                            <asp:Button ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click"/>
-                                        </a>  
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Views/AddItemType.aspx">Add Item Type</asp:HyperLink>
+                                        <asp:HyperLink ID="HyperLink4" runat="server"><asp:Button ID="LogoutBtn" runat="server" Text="Logout" style="border:none" OnClick="LogoutBtn_Click"/></asp:HyperLink>
                                     </div>
                                 </div>
                             </div>
