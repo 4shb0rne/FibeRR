@@ -71,3 +71,9 @@ C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.Co
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.dll
 C:\Users\ashbo\source\repos\PSDProject\PSDProject\obj\Debug\PSDProject.pdb
+C:\D\tugas kul\psd\PSDProject\bin\PSDProject.dll.config
+C:\D\tugas kul\psd\PSDProject\bin\PSDProject.dll
+C:\D\tugas kul\psd\PSDProject\bin\PSDProject.pdb
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.csproj.AssemblyReference.cache
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.csproj.CoreCompileInputs.cache
+C:\D\tugas kul\psd\PSDProject\obj\Debug\PSDProject.csproj.CopyComplete
