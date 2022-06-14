@@ -37,7 +37,7 @@
                                         <p class="card-text title-hover"><%# Eval("ItemName") %></p>
                                     </div>
                                     <div class="list-group list-group-flush">
-                                        <p class="list-group-item text-right" style="font-size: 18px;"><b><%# Eval("ItemPrice") %></b></p>
+                                        <p class="list-group-item text-right" style="font-size: 18px;"><b>$<%# Eval("ItemPrice") %></b></p>
                                     </div>
                                 </div>
                             </asp:LinkButton>

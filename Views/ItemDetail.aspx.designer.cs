@@ -33,6 +33,15 @@ namespace PSDProject.Views
         protected global::System.Web.UI.WebControls.Label ClothLbl;
 
         /// <summary>
+        /// Image control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image;
+
+        /// <summary>
         /// DescLbl control.
         /// </summary>
         /// <remarks>
@@ -42,13 +51,22 @@ namespace PSDProject.Views
         protected global::System.Web.UI.WebControls.Label DescLbl;
 
         /// <summary>
-        /// Image control.
+        /// PriceLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image;
+        protected global::System.Web.UI.WebControls.Label PriceLbl;
+
+        /// <summary>
+        /// CheckoutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckoutBtn;
 
         /// <summary>
         /// BtnPanel control.
@@ -76,23 +94,5 @@ namespace PSDProject.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button DeleteBtn;
-
-        /// <summary>
-        /// PriceLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label PriceLbl;
-
-        /// <summary>
-        /// CheckoutBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckoutBtn;
     }
 }

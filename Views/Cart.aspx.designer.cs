@@ -15,15 +15,6 @@ namespace PSDProject.Views
     {
 
         /// <summary>
-        /// CheckoutBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button CheckoutBtn;
-
-        /// <summary>
         /// TableRepeater control.
         /// </summary>
         /// <remarks>
@@ -31,5 +22,14 @@ namespace PSDProject.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater TableRepeater;
+
+        /// <summary>
+        /// CheckoutBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CheckoutBtn;
     }
 }

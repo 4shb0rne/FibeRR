@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="padding:2% 10%">
-        <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" class="btn btn-success w-100 mt-2" OnClick="CheckoutBtn_Click"/>
+        
         <table class="table">
             <thead>
                 <tr>
@@ -21,12 +21,13 @@
                             <td scope="row"><%# Eval("ItemId") %></td>
                             <td scope="row"><%# Eval("ItemTypeName") %></td>
                             <td scope="row"><%# Eval("ItemName") %></td>
-                            <td scope="row"><%# Eval("ItemPrice") %></td>
+                            <td scope="row">$<%# Eval("ItemPrice") %></td>
                             <td scope="row"><%# Eval("Quantity") %></td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
             </tbody>
         </table>
+        <asp:Button ID="CheckoutBtn" runat="server" Text="Checkout" class="btn btn-success w-100 mt-2" OnClick="CheckoutBtn_Click"/>
     </div>
 </asp:Content>

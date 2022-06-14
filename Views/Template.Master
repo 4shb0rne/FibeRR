@@ -172,7 +172,7 @@
                     </ul>
                 </div>
             </nav>
-            <div style="min-height: 75vh">
+            <div style="min-height: 74vh">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
                
                 </asp:ContentPlaceHolder>

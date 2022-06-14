@@ -9,14 +9,15 @@
                 <div class="card">
                     <div class="card-body">
                         <div>
-                            <h5>
+                            <h3>
                                 <asp:Label ID="NameLbl" runat="server" style="margin-top:-12px" Text=""></asp:Label>
-                            </h5>
+                            </h3>
                         </div>
                         <div>
                                 <asp:Image ID="Image" runat="server" class="w-50"/>
                         </div>
                         <div>
+                                <h5 class="mt-3">Detail :</h5>
                                 <asp:Label ID="DescriptionLbl" runat="server"></asp:Label>
                         </div>
                     </div>
@@ -27,9 +28,9 @@
                     <div class="card-body">
                         <div>
                             <h5>Price</h5>
-                            <h6><asp:Label ID="PriceLbl" runat="server" Text="Label"></asp:Label></h6>
-                            <h5>Quantity</h5>
-                            <asp:TextBox ID="QuantityTxt" runat="server" TextMode="Number"></asp:TextBox>
+                            <h5><asp:Label ID="PriceLbl" runat="server" Text="Label"></asp:Label></h5>
+                            <h5>Quantity : </h5> 
+                            <asp:TextBox ID="QuantityTxt" runat="server" TextMode="Number" CssClass="form-control"></asp:TextBox>
                             <asp:Button ID="SubmitBtn" runat="server" Text="Add to cart" 
                                 class="btn btn-success w-100 mt-2" OnClick="SubmitBtn_Click"/>
                         </div>
