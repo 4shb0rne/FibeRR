@@ -99,7 +99,6 @@ namespace PSDProject.Repository
                 img.Dispose();
                 files.Delete();
             }
-
             db.Items.Remove(item);
             db.SaveChanges();
             return true;
