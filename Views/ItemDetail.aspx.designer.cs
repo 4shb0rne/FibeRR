@@ -15,15 +15,6 @@ namespace PSDProject.Views
     {
 
         /// <summary>
-        /// CategoryLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CategoryLbl;
-
-        /// <summary>
         /// ClothLbl control.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace PSDProject.Views
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label ClothLbl;
+
+        /// <summary>
+        /// CategoryLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CategoryLbl;
 
         /// <summary>
         /// Image control.

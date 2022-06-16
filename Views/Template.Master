@@ -124,7 +124,7 @@
             <nav class="navbar navbar-expand-md"  style="margin: 0 5%">
                 <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
                     <asp:HyperLink ID="HomeIcon" runat="server" class="navbar-brand" style="height: 50px" NavigateUrl="~/Views/Home.aspx">
-                        <asp:Image ID="Image1" runat="server" ImageUrl="../assets/logo.png" style="width: 13%"/>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="../assets/logo.png" style="height: 50px"/>
                     </asp:HyperLink>
                 </div>
                 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
